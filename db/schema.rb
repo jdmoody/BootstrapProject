@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20130814223245) do
   create_table "users", force: true do |t|
     t.string   "username",        null: false
     t.string   "password_digest", null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "session_token",   null: false
   end
 
