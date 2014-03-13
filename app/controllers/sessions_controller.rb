@@ -16,13 +16,14 @@ class SessionsController < ApplicationController
       redirect_to user_url(@user)
     else
       flash.now[:errors] = ["Invalid Credentials"]
-      render :new
+      render 'static_pages/home'
     end
   end
 
   def destroy
     sign_out
-    redirect_to new_session_url
+    flash.notice = 'Sign out successful.'
+    redirect_to root_url
   end
 
   private

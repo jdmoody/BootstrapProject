@@ -1,6 +1,6 @@
 NewAuthDemo::Application.routes.draw do
   resources :users, :only => [:create, :new, :show]
-  resource :session, :only => [:create, :destroy, :new]
+  resource :session, :only => [:create, :destroy]
 
   root :to => "static_pages#home"
   get "/contact", to: "static_pages#contact"
