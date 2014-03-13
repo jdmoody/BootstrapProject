@@ -9,10 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require superhero_bootstrap
  *= require_tree .
  */
 
-@import "bootstrap";
+//@import "bootstrap";
 
 label {
   display: block;
@@ -40,6 +41,11 @@ label {
   text-align: center;
 }
 
-.ipsum-nav .active {
+.ipsum-nav {
+  .nav {
+  position: fixed;
+  }
+  .active {
   text-decoration: underline;
+  }
 }
