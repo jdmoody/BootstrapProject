@@ -17,3 +17,25 @@
 label {
   display: block;
 }
+
+.about-img {
+  height: 260px;
+}
+
+.staff-info {
+  text-align: justify;
+  h2 {
+    text-align: center;
+  }
+}
+
+.jumbotron {
+  text-align: center;
+  .col-sm-6 {
+    text-align: justify;
+  }
+}
+
+.team-header {
+  text-align: center;
+}
