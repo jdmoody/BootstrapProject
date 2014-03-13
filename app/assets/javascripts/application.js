@@ -14,3 +14,35 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(function () {
+  $("#contact-form").on("submit", function (event) {
+    event.preventDefault();
+    $(".alert").remove();
+    $(".has-error, .has-success").removeClass("has-error has-success");
+    var $inputs = $(event.currentTarget).find("input, textarea");
+    var errors = [];
+    $inputs.each(function (idx) {
+      var $input = $(this);
+      var $label = $input.parent();
+      if ($input.val() === "") {
+        $label.parent().addClass("has-error");
+        errors.push($label.text() + " can't be blank");
+      }
+      else {
+        $label.parent().addClass("has-success");
+      }
+    });
+    var $alert = $('<div>');
+    if (errors.length) {
+      $alert.addClass('alert alert-danger');
+      errors.forEach(function(error) {
+        $alert.append('<p>' + error + '</p>');
+      });
+    } else {
+      $alert.addClass('alert alert-success');
+      $alert.text('Submission successful!');
+    }
+    $(event.currentTarget).prepend($alert);
+  });
+});
