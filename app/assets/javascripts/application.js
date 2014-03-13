@@ -45,4 +45,6 @@ $(function () {
     }
     $(event.currentTarget).prepend($alert);
   });
+
+  $('a[data-toggle=tooltip]').tooltip();
 });
