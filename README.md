@@ -1,8 +1,12 @@
-# NewAuthDemo
+# Bootstrap Project
 
-* [app/models/user.rb](./app/models/user.rb)
-* [app/controllers/sessions_controller.rb](./app/controllers/sessions_controller.rb)
-* [app/controllers/users_controller.rb](./app/controllers/users_controller.rb)
-* [app/controllers/application_controller.rb](./app/controllers/application_controller.rb)
-* [app/views/sessions/new.html.erb](./app/views/sessions/new.html.erb)
-* [app/views/users/_form.html.erb](./app/views/users/_form.html.erb)
+## Description
+This project includes simple examples of how bootstrap can easily make apps really, really good looking.
+
+Bootstrap Features:
+* Navbar with dropdown menu functional on mobile devices
+* Grid system for organizing content
+* Jumbotron for the help page
+* Modals for sign-up / sign-in
+* ScrollSpy on Home page
+* Superhero bootstrap theme from Bootswatch
